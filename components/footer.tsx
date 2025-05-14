@@ -7,27 +7,29 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4">
-              Support<span className="text-primary">Hub</span>
+              Fit<span className="text-primary">Track</span>
             </h3>
-            <p className="text-muted-foreground">Providing excellent customer support for all your e-commerce needs.</p>
+            <p className="text-muted-foreground">
+              Track your fitness journey, visualize your progress, and achieve your goals.
+            </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Support</h4>
+            <h4 className="font-semibold mb-4">Features</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contact Us
+                <Link href="/dashboard" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Dashboard
                 </Link>
               </li>
               <li>
-                <Link href="/tickets/new" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Submit a Ticket
+                <Link href="/workouts" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Workout Tracking
                 </Link>
               </li>
               <li>
-                <Link href="/chat" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Live Chat
+                <Link href="/progress" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Progress Charts
                 </Link>
               </li>
             </ul>
@@ -37,8 +39,8 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/knowledge-base" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Knowledge Base
+                <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Fitness Blog
                 </Link>
               </li>
               <li>
@@ -47,8 +49,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/guides" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Guides
+                <Link href="/support" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Support
                 </Link>
               </li>
             </ul>
@@ -77,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} SupportHub. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} FitTrack. All rights reserved.</p>
         </div>
       </div>
     </footer>
