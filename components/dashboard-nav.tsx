@@ -1,6 +1,6 @@
 "use client"
 
-import type React from "react"
+import type { ComponentType } from "react"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -11,7 +11,7 @@ import { BarChart3, BrainCircuit, FlaskConical, LayoutDashboard, Settings, Zap }
 interface NavItem {
   title: string
   href: string
-  icon: React.ComponentType<{ className?: string }>
+  icon: ComponentType<{ className?: string }>
 }
 
 const navItems: NavItem[] = [
@@ -57,9 +57,6 @@ export function DashboardNav() {
           <Button
             variant={pathname === item.href ? "secondary" : "ghost"}
             className={cn("w-full justify-start", pathname === item.href ? "bg-secondary" : "")}
-          >
-            <item.icon className="mr-2 
-            pathname === item.href ? \"bg-secondary" : "")}
           >
             <item.icon className="mr-2 h-4 w-4" />
             {item.title}
