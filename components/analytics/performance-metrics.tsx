@@ -60,17 +60,9 @@ export function PerformanceMetrics() {
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={responseTimeData}>
                     <XAxis dataKey="date" />
-                    <YAxis
-                      label={{ value: "Seconds", angle: -90, position: "insideLeft" }}
-                    />
+                    <YAxis label={{ value: "Seconds", angle: -90, position: "insideLeft" }} />
                     <ChartTooltip content={<ChartTooltipContent />} />
-                    <Line
-                      type="monotone"
-                      dataKey="GPT-4"
-                      stroke="var(--color-GPT-4)"
-                      strokeWidth={2}
-                      dot={{ r: 4 }}
-                    />
+                    <Line type="monotone" dataKey="GPT-4" stroke="var(--color-GPT-4)" strokeWidth={2} dot={{ r: 4 }} />
                     <Line
                       type="monotone"
                       dataKey="Claude 3"
@@ -109,4 +101,39 @@ export function PerformanceMetrics() {
                     color: "hsl(var(--chart-2))",
                   },
                   "Gemini Pro": {
-                    label
+                    label: "Gemini Pro",
+                    color: "hsl(var(--chart-3))",
+                  },
+                }}
+                className="h-[300px]"
+              >
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={accuracyData}>
+                    <XAxis dataKey="date" />
+                    <YAxis label={{ value: "Accuracy %", angle: -90, position: "insideLeft" }} domain={[80, 100]} />
+                    <ChartTooltip content={<ChartTooltipContent />} />
+                    <Line type="monotone" dataKey="GPT-4" stroke="var(--color-GPT-4)" strokeWidth={2} dot={{ r: 4 }} />
+                    <Line
+                      type="monotone"
+                      dataKey="Claude 3"
+                      stroke="var(--color-Claude 3)"
+                      strokeWidth={2}
+                      dot={{ r: 4 }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="Gemini Pro"
+                      stroke="var(--color-Gemini Pro)"
+                      strokeWidth={2}
+                      dot={{ r: 4 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}
